@@ -1,8 +1,9 @@
- #include "Map.h"
+#include "Map.h"
 
 using namespace std;
 
 int main () {
+    cout << "owo" << endl;
     Map my_map = Map(8);
     Tile my_tile = Tile(true, true, "X");
     my_map.changeTile(0, 0, my_tile);
