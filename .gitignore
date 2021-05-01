@@ -1,5 +1,7 @@
+#CLion special
 .idea/
 CMakeLists.txt
 cmake*/
-*.exe
-*.out
+
+# Ojbject files
+*.o
