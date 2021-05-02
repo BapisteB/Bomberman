@@ -1,25 +1,30 @@
+CC = g++
+CFLAGS = -c -pedantic -Wall 
+SDLFAGS = `sdl2-config --cflags --libs`
+
 all : main
 
-main: Map.o Map.h Tile.h Player.h Power_up.h
-	g++ -Wall -o Bomberman -c main.cpp
+main: My_window.o
+	$(CC) -pedantic -Wall -o Bomberman My_window.cpp Player.cpp main.cpp Map.cpp Tile.cpp Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
+#	rm -rf *.o
 
-SDL_prgm: My_window.o
-	g++ -o SDL_prgm main.cpp `sdl2-config --cflags --libs` 
+My_window.o: Map.o
+	$(CC) $(CFLAGS) My_window.cpp Player.cpp Map.cpp Tile.cpp Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
 
-My_window.o: Player.o
-	g++ -c -o My_window.o My_window.cpp `sdl2-config --cflags --libs`
+Player.o: Tools.o
+	$(CC) $(CFLAGS) Player.cpp Tools.cpp `sdl2-config --cflags --libs` 
 
-Player.o:
-	g++ -c -o Player.o Player.cpp `sdl2-config --cflags --libs`
+Map.o: Tile.o Player.o
+	$(CC) $(CFLAGS) Map.cpp Tile.cpp Spritesheet.cpp Tools.cpp Player.cpp `sdl2-config --cflags --libs`
 
-Map.o: Tile.o Map.cpp Map.h
-	g++ -Wall -o Map.o -c Map.cpp
+Tile.o: Spritesheet.o
+	$(CC) $(CFLAGS) Tile.cpp Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
 
-Power_up.o: Power_up.cpp Power_up.h
-	g++ -Wall -o Power_up.o -c Power_up.cpp
+Spritesheet.o: Tools.o
+	$(CC) $(CFLAGS) Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
 
-Tile.o: Tile.cpp Tile.h
-	g++ -Wall -o Tile.o -c Tile.cpp
+Tools.o:
+	$(CC) $(CFLAGS) Tools.cpp `sdl2-config --cflags --libs`
 
 clean:
 	rm -rf *.o

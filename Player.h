@@ -5,6 +5,7 @@
 #ifndef BOMBERMAN_PLAYER_H
 #define BOMBERMAN_PLAYER_H
 
+#include "Tools.h"
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>

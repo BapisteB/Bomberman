@@ -21,17 +21,25 @@ Player::Player() {
 void Player::handle_events(const SDL_Event &event) {
 	switch(event.type) {
 		case SDL_KEYDOWN:
-		Uint8 const *keys = SDL_GetKeyboardState(nullptr);
+			Uint8 const *keys = SDL_GetKeyboardState(nullptr);
 	
-		if(keys[SDL_SCANCODE_Z] == 1)
-			m_direction = Direction::UP;
-		else if (keys[SDL_SCANCODE_S] == 1)
-			m_direction = Direction::DOWN;
-		else if (keys[SDL_SCANCODE_Q] == 1)
-			m_direction = Direction::LEFT;
-		else if (keys[SDL_SCANCODE_D] == 1)
-			m_direction = Direction::RIGHT;
-		break;
+			if(keys[SDL_SCANCODE_W] == 1) {
+				m_direction = Direction::UP;
+				std::cout << "Direction: UP\n";
+			}
+			else if (keys[SDL_SCANCODE_S] == 1) {
+				m_direction = Direction::DOWN;
+				std::cout << "Direction: DOWN\n";
+			}
+			else if (keys[SDL_SCANCODE_A] == 1) {
+				m_direction = Direction::LEFT;
+				std::cout << "Direction: LEFT\n";
+			}
+			else if (keys[SDL_SCANCODE_D] == 1) {
+				m_direction = Direction::RIGHT;
+				std::cout << "Direction: RIGHT\n";
+			}
+			break;
 	}
 }
 
@@ -40,25 +48,22 @@ void Player::update(double delta_time) {
 		case Direction::NONE:
 			m_x += 0.0;
 			m_y += 0.0;
-			std::cout << "Direction: NONE\n";
 			break;
 		case Direction::UP:
-			m_y = m_y - (5.0 * delta_time);
-			std::cout << "Direction: UP\n";
+			m_y = m_y - (100.0 * delta_time);
 			break;
 		case Direction::DOWN:
-			m_y = m_y + (5.0 * delta_time);
-			std::cout << "Direction: DOWN\n";
+			m_y = m_y + (100.0 * delta_time);
 			break;
 		case Direction::LEFT:
-			m_x = m_x - (5.0 * delta_time);
-			std::cout << "Direction: LEFT\n";
+			m_x = m_x - (100.0 * delta_time);
 			break;
 		case Direction::RIGHT:
-			m_x = m_x + (5.0 * delta_time);
-			std::cout << "Direction: RIGHT\n";
+			m_x = m_x + (100.0 * delta_time);
 			break;
 	}
+
+	m_direction = Direction::NONE;
 
 	m_position.x = m_x;
 	m_position.y = m_y;

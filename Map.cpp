@@ -5,6 +5,7 @@
 #include "Map.h"
 
 Map::Map(size_t s) {
+	std::cout << "Creating map...\n";
     size = s;
     board.resize(size);
     for (std::vector<Tile> &p : board)
@@ -28,16 +29,29 @@ Map::Map(const char *src) {
     }
 }
 
-void Map::display() {
-    for (std::vector<Tile> p : board) {
-        for (Tile tile : p)
-            cout << tile.texture << " ";
-        cout << endl;
-    }
-}
-
 void Map::changeTile(int x, int y, Tile tile) {
     board[x][y] = tile;
+}
+
+void Map::update(double delta_time) {
+	return;
+}
+
+void Map::draw(SDL_Surface *window_surface) {
+	SDL_Rect m_rect;
+	m_rect.x = 0.0;
+	m_rect.y = 0.0;
+	m_rect.w = board[0][0].texture.clip.w;
+	m_rect.h = board[0][0].texture.clip.h;
+
+	for (size_t i = 0; i < board.size(); i++) {
+		for (size_t j = 0; j < board[i].size(); j++) {
+			m_rect.x += m_rect.w;
+			board[i][j].draw(window_surface, NULL);
+		}
+		m_rect.y += m_rect.h;
+		m_rect.x = 0.0;
+	}
 }
 
 void Map::saveMap(const char *src) {

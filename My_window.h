@@ -8,7 +8,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
-#include "Player.h"
+#include "Map.h"
 
 class My_window {
 public:
@@ -23,8 +23,9 @@ public:
     void draw();
 
 private:
-	Player		m_player;
-    
+	Player		 m_player;
+	Map			 m_map;
+
     SDL_Window  *m_window;
     SDL_Surface *m_window_surface;
     SDL_Event    m_window_event;
