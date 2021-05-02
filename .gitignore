@@ -3,5 +3,5 @@
 CMakeLists.txt
 cmake*/
 
-# Ojbject files
+# Object files
 *.o
