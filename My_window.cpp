@@ -21,7 +21,7 @@ My_window::My_window() {
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
-	m_map = Map(5);
+	m_map = Map(8);
 }
 
 My_window::~My_window() {

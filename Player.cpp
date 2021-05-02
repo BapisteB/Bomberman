@@ -25,19 +25,15 @@ void Player::handle_events(const SDL_Event &event) {
 	
 			if(keys[SDL_SCANCODE_W] == 1) {
 				m_direction = Direction::UP;
-				std::cout << "Direction: UP\n";
 			}
 			else if (keys[SDL_SCANCODE_S] == 1) {
 				m_direction = Direction::DOWN;
-				std::cout << "Direction: DOWN\n";
 			}
 			else if (keys[SDL_SCANCODE_A] == 1) {
 				m_direction = Direction::LEFT;
-				std::cout << "Direction: LEFT\n";
 			}
 			else if (keys[SDL_SCANCODE_D] == 1) {
 				m_direction = Direction::RIGHT;
-				std::cout << "Direction: RIGHT\n";
 			}
 			break;
 	}
@@ -50,16 +46,16 @@ void Player::update(double delta_time) {
 			m_y += 0.0;
 			break;
 		case Direction::UP:
-			m_y = m_y - (100.0 * delta_time);
+			m_y = m_y - (200.0 * delta_time);
 			break;
 		case Direction::DOWN:
-			m_y = m_y + (100.0 * delta_time);
+			m_y = m_y + (200.0 * delta_time);
 			break;
 		case Direction::LEFT:
-			m_x = m_x - (100.0 * delta_time);
+			m_x = m_x - (200.0 * delta_time);
 			break;
 		case Direction::RIGHT:
-			m_x = m_x + (100.0 * delta_time);
+			m_x = m_x + (200.0 * delta_time);
 			break;
 	}
 

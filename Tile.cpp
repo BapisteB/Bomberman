@@ -5,41 +5,31 @@
 #include "Tile.h"
 
 Tile::Tile(){
-	row = 0;
-	col = 0;
+	row = 2;
+	col = 2;
 	breakable = true;
-	texture = Spritesheet("Spritesheet.bmp", 2, 2);
+	texture = Spritesheet("Spritesheet.bmp", row, col);
 	m_type = Type::FLOOR;
-	select_type();
+	select_texture_from_type();
 }
 
 Tile::Tile(ifstream & is) {
     is >> breakable >> row >> col >> path;
 	texture = Spritesheet((const char*)path, row, col);
 	m_type = Type::FLOOR;
-	select_type();
+	select_texture_from_type();
 }
 
-Tile::Tile(bool br, char* p, int r, int c) {
-	row = r;
-	col = c;
-	path = p;
-    breakable = br;
-    texture = Spritesheet(path, row, col);
-	m_type = Type::FLOOR;
-	select_type();
-}
-
-void Tile::select_type() {
+void Tile::select_texture_from_type() {
 	switch(m_type) {
 		case Type::FLOOR:
-			texture.select_sprite(0, 1);
+			texture.select_sprite(1, 0);
 			break;
 		case Type::EXPLOSION:
 			texture.select_sprite(0, 0);
 			break;
 		case Type::WALL:
-			texture.select_sprite(1, 0);
+			texture.select_sprite(0, 1);
 			break;
 		case Type::BREAKABLE_WALL:
 			texture.select_sprite(1, 1);
@@ -56,7 +46,6 @@ void Tile::update(double delta_time) {
 }
 
 void Tile::draw(SDL_Surface *window_surface, SDL_Rect *position) {
-	std::cout << "Drawing Tile...\n";
 	texture.draw_selected_sprite(window_surface, position);
 }
 

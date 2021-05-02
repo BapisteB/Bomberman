@@ -9,7 +9,7 @@ public:
 
 	Spritesheet(const char *path, int row, int col);
 
-	~Spritesheet();
+	~Spritesheet() = default;
 
 	void select_sprite(int x, int y);
 
@@ -17,7 +17,4 @@ public:
 
 private:
 	SDL_Surface	*spritesheet_image;
-
-	int 		 start_y;
-	int 		 start_x;
 };

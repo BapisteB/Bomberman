@@ -16,6 +16,11 @@ class Tile {
 public:
 	Spritesheet	 texture;
 
+	/**
+	* An enum to choose different Tile types => might
+	* be changed into Map.h/cpp for changing the Type 
+	* easily.
+	*/
 	enum class Type {
 		FLOOR,
 		EXPLOSION,
@@ -23,18 +28,39 @@ public:
 		BREAKABLE_WALL
 	};
 
-	explicit Tile();
+	Tile();
 	
 	Tile(ifstream & is);
 
-    Tile(bool br, char *path, int row, int col);
+	
+	/**
+	* Select the texture of the Spritesheet depending
+	* on the selected type.
+	*/
+	void select_texture_from_type();
 
-	void select_type();
-
+	/**
+	* Not fully implemented and might not be used or
+	* maybe made virtual to implement the explosive 
+	* tiles.
+	*
+	* @param delta_time
+	*/
 	void update(double delta_time);
 
+	/**
+	* Draws a tile
+	*
+	* @param window_surface the window we are drawing on
+	* @param position the position where we draw
+	*/
 	void draw(SDL_Surface *window_surface, SDL_Rect *position);
 
+	/**
+	* Saves a tile 
+	*
+	* @param src the string that will be written
+	*/
     void save(string &src) const;
 
 private:

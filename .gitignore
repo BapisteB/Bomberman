@@ -5,3 +5,6 @@ cmake*/
 
 # Object files
 *.o
+
+#Executable
+*.exe

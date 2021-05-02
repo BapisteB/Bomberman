@@ -1,0 +1,2 @@
+Comment all files beside Tile.h 
+Make the change_type method to change tile type (in Map.h ?)

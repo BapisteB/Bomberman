@@ -5,7 +5,7 @@ SDLFAGS = `sdl2-config --cflags --libs`
 all : main
 
 main: My_window.o
-	$(CC) -pedantic -Wall -o Bomberman My_window.cpp Player.cpp main.cpp Map.cpp Tile.cpp Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
+	$(CC) -pedantic -Wall -o Bomberman.exe My_window.cpp Player.cpp main.cpp Map.cpp Tile.cpp Spritesheet.cpp Tools.cpp `sdl2-config --cflags --libs`
 #	rm -rf *.o
 
 My_window.o: Map.o
