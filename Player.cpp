@@ -1,6 +1,3 @@
-//
-// Created by bapti on 06/04/2021.
-//
 
 #include "Player.h"
 
@@ -68,5 +65,4 @@ void Player::update(double delta_time) {
 void Player::draw(SDL_Surface *window_surface) {
 	SDL_BlitSurface(m_image, NULL, window_surface, &m_position);
 }
-
 

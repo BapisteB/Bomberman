@@ -12,14 +12,33 @@
 
 class My_window {
 public:
+	/**
+	* @brief Creates a new window from scratch 
+	*/
     My_window();
 
+	/**
+	* @brief Destroys the window object
+	*/
     ~My_window();
 
+	/**
+	* @brief Main function to keep the game running 
+	*/
     void loop();
 
+	/**
+	* @brief updates the game by updating the map 
+	* and the player
+	*
+	* @param delta_time frames per seconds
+	*/
     void update(double delta_time);
 
+	/**
+	* @brief redraws the game by redrawing the map 
+	* and the player
+	*/
     void draw();
 
 private:

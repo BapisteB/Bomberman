@@ -1,0 +1,96 @@
+\hypertarget{classTile}{}\doxysection{Tile Class Reference}
+\label{classTile}\index{Tile@{Tile}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classTile_afa5ef05a7f2ea1f3e44398c001abc738}{Type}} \{ {\bfseries FLOOR}
+, {\bfseries EXPLOSION}
+, {\bfseries WALL}
+, {\bfseries BREAKABLE\+\_\+\+WALL}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTile_ac1c156deeb700876587d4174734de964}\label{classTile_ac1c156deeb700876587d4174734de964}} 
+{\bfseries Tile} (ifstream \&is)
+\item 
+void \mbox{\hyperlink{classTile_a4fea7ed0bd5fe39fa5a111ddd2050004}{select\+\_\+texture\+\_\+from\+\_\+type}} ()
+\item 
+void \mbox{\hyperlink{classTile_aebcc47c853ddb04e4f22ac518c7b83f6}{update}} (double delta\+\_\+time)
+\item 
+void \mbox{\hyperlink{classTile_a29645ae9a414d2baee2da0f4409cb061}{draw}} (SDL\+\_\+\+Surface $\ast$window\+\_\+surface, SDL\+\_\+\+Rect $\ast$position)
+\item 
+void \mbox{\hyperlink{classTile_a068eb6d2f0915d1b5d58881a5cc4fdc8}{save}} (string \&src) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTile_a46af5d633c8945c10a3b3ce4e68aced2}\label{classTile_a46af5d633c8945c10a3b3ce4e68aced2}} 
+\mbox{\hyperlink{classSpritesheet}{Spritesheet}} {\bfseries texture}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classTile_afa5ef05a7f2ea1f3e44398c001abc738}\label{classTile_afa5ef05a7f2ea1f3e44398c001abc738}} 
+\index{Tile@{Tile}!Type@{Type}}
+\index{Type@{Type}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTile_afa5ef05a7f2ea1f3e44398c001abc738}{Tile\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+An enum to choose different \mbox{\hyperlink{classTile}{Tile}} types =$>$ might be changed into \mbox{\hyperlink{Map_8h_source}{Map.\+h}}/cpp for changing the Type easily. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTile_a29645ae9a414d2baee2da0f4409cb061}\label{classTile_a29645ae9a414d2baee2da0f4409cb061}} 
+\index{Tile@{Tile}!draw@{draw}}
+\index{draw@{draw}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Tile\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Surface $\ast$}]{window\+\_\+surface,  }\item[{SDL\+\_\+\+Rect $\ast$}]{position }\end{DoxyParamCaption})}
+
+Draws a tile
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+surface} & the window we are drawing on \\
+\hline
+{\em position} & the position where we draw \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTile_a068eb6d2f0915d1b5d58881a5cc4fdc8}\label{classTile_a068eb6d2f0915d1b5d58881a5cc4fdc8}} 
+\index{Tile@{Tile}!save@{save}}
+\index{save@{save}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Tile\+::save (\begin{DoxyParamCaption}\item[{string \&}]{src }\end{DoxyParamCaption}) const}
+
+Saves a tile
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the string that will be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTile_a4fea7ed0bd5fe39fa5a111ddd2050004}\label{classTile_a4fea7ed0bd5fe39fa5a111ddd2050004}} 
+\index{Tile@{Tile}!select\_texture\_from\_type@{select\_texture\_from\_type}}
+\index{select\_texture\_from\_type@{select\_texture\_from\_type}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{select\_texture\_from\_type()}{select\_texture\_from\_type()}}
+{\footnotesize\ttfamily void Tile\+::select\+\_\+texture\+\_\+from\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select the texture of the \mbox{\hyperlink{classSpritesheet}{Spritesheet}} depending on the selected type. \mbox{\Hypertarget{classTile_aebcc47c853ddb04e4f22ac518c7b83f6}\label{classTile_aebcc47c853ddb04e4f22ac518c7b83f6}} 
+\index{Tile@{Tile}!update@{update}}
+\index{update@{update}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tile\+::update (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+time }\end{DoxyParamCaption})}
+
+Not fully implemented and might not be used or maybe made virtual to implement the explosive tiles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tile.\+h\item 
+Tile.\+cpp\end{DoxyCompactItemize}

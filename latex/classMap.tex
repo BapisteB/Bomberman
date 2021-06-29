@@ -1,0 +1,121 @@
+\hypertarget{classMap}{}\doxysection{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMap_a3e9b8c9ae1bc0359487e81d245e3deb2}{Map}} (size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Creates new map object from a size (only for tests) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMap_a7f8b82296e2b5f2862bd07046a9e23c1}{Map}} (const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Creates new map object from a savefile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a7c827b9cb307645debe25abf167f322a}{change\+Tile}} (int x, int y, \mbox{\hyperlink{classTile}{Tile}} tile)
+\begin{DoxyCompactList}\small\item\em Changes a tile to another, mostly for an after explosion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_af75ca9f79cec0921b636ff72533d8644}{update}} (double delta\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Updates the game by calling other update methods for other objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a4b82bdb8d7f29c22a39bf6db710bcf1e}{draw}} (SDL\+\_\+\+Surface $\ast$window\+\_\+surface)
+\begin{DoxyCompactList}\small\item\em Redraws the game by calling draw method for other objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap_a539f251cd2ac18331ad76a1c4ae5d351}{save\+Map}} (const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Saves the map object to a savefile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMap_a3e9b8c9ae1bc0359487e81d245e3deb2}\label{classMap_a3e9b8c9ae1bc0359487e81d245e3deb2}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Creates new map object from a size (only for tests) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the size of the map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_a7f8b82296e2b5f2862bd07046a9e23c1}\label{classMap_a7f8b82296e2b5f2862bd07046a9e23c1}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Creates new map object from a savefile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the path to the save file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMap_a7c827b9cb307645debe25abf167f322a}\label{classMap_a7c827b9cb307645debe25abf167f322a}} 
+\index{Map@{Map}!changeTile@{changeTile}}
+\index{changeTile@{changeTile}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{changeTile()}{changeTile()}}
+{\footnotesize\ttfamily void Map\+::change\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classTile}{Tile}}}]{tile }\end{DoxyParamCaption})}
+
+
+
+Changes a tile to another, mostly for an after explosion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & coordinates of the tile to change \\
+\hline
+{\em tile} & new tile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_a4b82bdb8d7f29c22a39bf6db710bcf1e}\label{classMap_a4b82bdb8d7f29c22a39bf6db710bcf1e}} 
+\index{Map@{Map}!draw@{draw}}
+\index{draw@{draw}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Map\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Surface $\ast$}]{window\+\_\+surface }\end{DoxyParamCaption})}
+
+
+
+Redraws the game by calling draw method for other objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+surface} & The surface that we will redraw on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_a539f251cd2ac18331ad76a1c4ae5d351}\label{classMap_a539f251cd2ac18331ad76a1c4ae5d351}} 
+\index{Map@{Map}!saveMap@{saveMap}}
+\index{saveMap@{saveMap}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{saveMap()}{saveMap()}}
+{\footnotesize\ttfamily void Map\+::save\+Map (\begin{DoxyParamCaption}\item[{const char $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Saves the map object to a savefile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the path to the savefile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap_af75ca9f79cec0921b636ff72533d8644}\label{classMap_af75ca9f79cec0921b636ff72533d8644}} 
+\index{Map@{Map}!update@{update}}
+\index{update@{update}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Map\+::update (\begin{DoxyParamCaption}\item[{double}]{delta\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Updates the game by calling other update methods for other objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+time} & used to change the frame per seconds of the game \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Map.\+h\item 
+Map.\+cpp\end{DoxyCompactItemize}

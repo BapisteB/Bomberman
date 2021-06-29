@@ -1,0 +1,83 @@
+\hypertarget{classSpritesheet}{}\doxysection{Spritesheet Class Reference}
+\label{classSpritesheet}\index{Spritesheet@{Spritesheet}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpritesheet_a8ebb4662dc99446c9ec85aefb0ccc965}\label{classSpritesheet_a8ebb4662dc99446c9ec85aefb0ccc965}} 
+\mbox{\hyperlink{classSpritesheet_a8ebb4662dc99446c9ec85aefb0ccc965}{Spritesheet}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new spritesheet object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSpritesheet_ad13eb4bf7422fe431a8f288934d0eda2}{Spritesheet}} (const char $\ast$path, int row, int col)
+\begin{DoxyCompactList}\small\item\em Creates a new spritesheet object from variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSpritesheet_acaa39e04568b24095c89070ad154833e}{select\+\_\+sprite}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Select a sprite from the spritesheet and saves it in a SDL\+\_\+\+Surface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSpritesheet_ab0f9f0f8d6f9c3f4cd1e1ad5d45fffe4}{draw\+\_\+selected\+\_\+sprite}} (SDL\+\_\+\+Surface $\ast$window\+\_\+surface, SDL\+\_\+\+Rect $\ast$position)
+\begin{DoxyCompactList}\small\item\em draws the selected sprite on a windows \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpritesheet_a70a7ce07bc07ee611f408978ed43b2d7}\label{classSpritesheet_a70a7ce07bc07ee611f408978ed43b2d7}} 
+SDL\+\_\+\+Rect {\bfseries clip}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSpritesheet_ad13eb4bf7422fe431a8f288934d0eda2}\label{classSpritesheet_ad13eb4bf7422fe431a8f288934d0eda2}} 
+\index{Spritesheet@{Spritesheet}!Spritesheet@{Spritesheet}}
+\index{Spritesheet@{Spritesheet}!Spritesheet@{Spritesheet}}
+\doxysubsubsection{\texorpdfstring{Spritesheet()}{Spritesheet()}}
+{\footnotesize\ttfamily Spritesheet\+::\+Spritesheet (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Creates a new spritesheet object from variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to the spritesheet file \\
+\hline
+{\em row} & number of rows in the spritesheet \\
+\hline
+{\em col} & number of columns in the spritesheet \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSpritesheet_ab0f9f0f8d6f9c3f4cd1e1ad5d45fffe4}\label{classSpritesheet_ab0f9f0f8d6f9c3f4cd1e1ad5d45fffe4}} 
+\index{Spritesheet@{Spritesheet}!draw\_selected\_sprite@{draw\_selected\_sprite}}
+\index{draw\_selected\_sprite@{draw\_selected\_sprite}!Spritesheet@{Spritesheet}}
+\doxysubsubsection{\texorpdfstring{draw\_selected\_sprite()}{draw\_selected\_sprite()}}
+{\footnotesize\ttfamily void Spritesheet\+::draw\+\_\+selected\+\_\+sprite (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Surface $\ast$}]{window\+\_\+surface,  }\item[{SDL\+\_\+\+Rect $\ast$}]{position }\end{DoxyParamCaption})}
+
+
+
+draws the selected sprite on a windows 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+surface} & the window we draw on \\
+\hline
+{\em position} & the position of the sprite on the window surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSpritesheet_acaa39e04568b24095c89070ad154833e}\label{classSpritesheet_acaa39e04568b24095c89070ad154833e}} 
+\index{Spritesheet@{Spritesheet}!select\_sprite@{select\_sprite}}
+\index{select\_sprite@{select\_sprite}!Spritesheet@{Spritesheet}}
+\doxysubsubsection{\texorpdfstring{select\_sprite()}{select\_sprite()}}
+{\footnotesize\ttfamily void Spritesheet\+::select\+\_\+sprite (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Select a sprite from the spritesheet and saves it in a SDL\+\_\+\+Surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & position of the sprite in the spritesheet \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Spritesheet.\+h\item 
+Spritesheet.\+cpp\end{DoxyCompactItemize}
